@@ -39,8 +39,8 @@ This project facilitates Human-Computer Interaction (HCI) by converting static h
 ### Steps
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/FERI-RAMADHAN/smart-gesture-recognition.git](https://github.com/Feriurguy/Gesture-Control.git)
-    cd smart-gesture-recognition
+    git clone [https://github.com/yourusername/gesture-recognition-system.git](https://github.com/yourusername/gesture-recognition-system.git)
+    cd gesture-recognition-system
     ```
 
 2.  **Create a Virtual Environment (Recommended)**
@@ -66,55 +66,3 @@ This system is designed in three modular stages. Follow this order to get starte
 Use this script to create a dataset for a new gesture.
 ```bash
 python collect_data.py
-
-```
-
-* Enter the name of the gesture (e.g., "Hello").
-* Press **'R'** to start recording (the system captures 150 samples).
-* The data is saved automatically in the `data/` directory.
-
-### 2. Model Training (`train_model.py`)
-
-Run this script to train the AI model on your collected data.
-
-```bash
-python train_model.py
-
-```
-
-* The script loads all CSV files from `data/`.
-* It trains a Random Forest Classifier.
-* The trained model is saved to `models/gesture_model.pkl`.
-
-### 3. Run Application (`main.py`)
-
-Start the main interface for real-time recognition.
-
-```bash
-python main.py
-
-```
-
-* **Interact:** Use your index finger to "click" the virtual **VOICE** button to toggle sound.
-* **Exit:** Press **'Q'** to close the application.
-
-## 📂 Project Structure
-
-```text
-├── audio_cache/       # Auto-generated MP3 files for low-latency playback
-├── data/              # CSV datasets for training
-├── models/            # Serialized Machine Learning models (.pkl)
-├── collect_data.py    # Data acquisition tool
-├── main.py            # Main application entry point
-├── speaker.py         # Audio engine with caching logic
-├── train_model.py     # Model training script
-├── requirements.txt   # Python dependencies
-└── README.md          # Project documentation
-
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
-
-*Developed by Feri Ramadhan*
