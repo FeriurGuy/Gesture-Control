@@ -6,7 +6,7 @@ A computer vision application that translates real-time hand gestures into spoke
 ![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green)
 ![License](https://img.shields.io/badge/license-MIT-grey)
 
-## 📋 Table of Contents
+## Table of Contents
 - [Overview](#overview)
 - [Key Features](#key-features)
 - [System Architecture](#system-architecture)
@@ -15,7 +15,7 @@ A computer vision application that translates real-time hand gestures into spoke
 - [Project Structure](#project-structure)
 - [License](#license)
 
-## 🔍 Overview
+## Overview
 This project facilitates Human-Computer Interaction (HCI) by converting static hand gestures into audible speech. It provides an end-to-end pipeline allowing users to record custom datasets, train a machine learning model, and execute real-time inference using a standard webcam.
 
 ## ✨ Key Features
@@ -30,7 +30,7 @@ This project facilitates Human-Computer Interaction (HCI) by converting static h
 2.  **Processing Layer:** Normalizes data and predicts the gesture class using the pre-trained model.
 3.  **Interaction Layer:** Checks for virtual button collisions (e.g., Toggle Voice) and manages audio output queues.
 
-## 💻 Installation
+## Installation
 
 ### Prerequisites
 * Python 3.8 or higher
@@ -39,7 +39,7 @@ This project facilitates Human-Computer Interaction (HCI) by converting static h
 ### Steps
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/yourusername/gesture-recognition-system.git](https://github.com/yourusername/gesture-recognition-system.git)
+    git clone [https://github.com/yourusername/gesture-recognition-system.git](https://github.com/FeriurGuy/Gesture-Control.git)
     cd gesture-recognition-system
     ```
 
@@ -58,7 +58,7 @@ This project facilitates Human-Computer Interaction (HCI) by converting static h
     pip install -r requirements.txt
     ```
 
-## 🚀 Usage Workflow
+## Usage Workflow
 
 This system is designed in three modular stages. Follow this order to get started:
 
