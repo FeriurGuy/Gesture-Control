@@ -18,14 +18,14 @@ A computer vision application that translates real-time hand gestures into spoke
 ## Overview
 This project facilitates Human-Computer Interaction (HCI) by converting static hand gestures into audible speech. It provides an end-to-end pipeline allowing users to record custom datasets, train a machine learning model, and execute real-time inference using a standard webcam.
 
-## ✨ Key Features
+## Key Features
 * **Real-time Detection:** High-performance hand tracking using MediaPipe (21 landmarks).
 * **Virtual Interface:** "Touchless" virtual buttons controlled by fingertip coordinates.
 * **Custom Data Collection:** Integrated tools to record and label new gesture datasets easily.
 * **Audio Caching Engine:** Implements MD5 hashing to cache generated audio, eliminating network latency for repeated phrases.
 * **Robust Classification:** Uses a Random Forest Classifier to ensure high accuracy with minimal computational load.
 
-## 🛠 System Architecture
+## System Architecture
 1.  **Input Layer:** Captures video feed and extracts hand landmarks (x, y, z coordinates).
 2.  **Processing Layer:** Normalizes data and predicts the gesture class using the pre-trained model.
 3.  **Interaction Layer:** Checks for virtual button collisions (e.g., Toggle Voice) and manages audio output queues.
