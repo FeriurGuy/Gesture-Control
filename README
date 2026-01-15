@@ -1,8 +1,3 @@
-Tentu, ini adalah **README.md** versi final yang bersih, profesional, dan siap pakai. Formatnya sudah disesuaikan dengan standar *software documentation*.
-
-Silakan **copy** seluruh kode di dalam kotak di bawah ini, lalu **paste** ke file bernama `README.md` di GitHub repository kamu.
-
-```markdown
 # Smart Hand Gesture Recognition System
 
 A computer vision application that translates real-time hand gestures into spoken audio commands. This system leverages **MediaPipe** for hand landmark detection and **Scikit-Learn** for gesture classification, featuring a virtual touchless interface and low-latency audio feedback.
@@ -124,8 +119,4 @@ This project is licensed under the MIT License - see the [LICENSE](https://www.g
 
 ---
 
-**Developed by Feri Ramadhan**
-
-```
-
-```
+*Developed by Feri Ramadhan*
