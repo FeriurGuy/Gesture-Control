@@ -1,0 +1,8 @@
+gTTS
+joblib
+mediapipe
+numpy
+opencv_contrib_python
+pandas
+pygame
+scikit_learn
