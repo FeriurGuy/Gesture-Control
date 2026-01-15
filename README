@@ -1,55 +1,59 @@
-# Hand Gesture Recognition System
+Tentu, ini adalah **README.md** versi final yang bersih, profesional, dan siap pakai. Formatnya sudah disesuaikan dengan standar *software documentation*.
 
-A computer vision-based application that interprets hand gestures into spoken commands using real-time landmark detection. This system integrates **MediaPipe** for hand tracking and **Scikit-Learn** for pattern classification, featuring a touchless virtual interface and optimized audio feedback.
+Silakan **copy** seluruh kode di dalam kotak di bawah ini, lalu **paste** ke file bernama `README.md` di GitHub repository kamu.
 
-![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+```markdown
+# Smart Hand Gesture Recognition System
+
+A computer vision application that translates real-time hand gestures into spoken audio commands. This system leverages **MediaPipe** for hand landmark detection and **Scikit-Learn** for gesture classification, featuring a virtual touchless interface and low-latency audio feedback.
+
+![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
 ![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green)
-![License](https://img.shields.io/badge/License-MIT-grey)
+![License](https://img.shields.io/badge/license-MIT-grey)
 
-## Table of Contents
+## 📋 Table of Contents
 - [Overview](#overview)
 - [Key Features](#key-features)
 - [System Architecture](#system-architecture)
 - [Installation](#installation)
-- [Usage](#usage)
+- [Usage Workflow](#usage-workflow)
 - [Project Structure](#project-structure)
-- [Dependencies](#dependencies)
 - [License](#license)
 
-## Overview
-This project aims to facilitate human-computer interaction (HCI) by converting static hand gestures into audio output. It provides an end-to-end pipeline for dataset collection, model training, and real-time inference. The system is designed to be lightweight and runs on standard CPU hardware without requiring heavy GPU acceleration.
+## 🔍 Overview
+This project facilitates Human-Computer Interaction (HCI) by converting static hand gestures into audible speech. It provides an end-to-end pipeline allowing users to record custom datasets, train a machine learning model, and execute real-time inference using a standard webcam.
 
-## Key Features
-* **Real-time Inference:** Utilizes MediaPipe Hands for low-latency landmark extraction (21 points).
-* **Custom Dataset Generation:** Includes a dedicated tool for recording and labeling new gesture data.
-* **Interactive Virtual UI:** Features a virtual button mechanism allowing users to control system parameters (e.g., audio toggle) via fingertip tracking.
-* **Audio Caching System:** Implements an MD5-based caching mechanism to eliminate latency for repeated text-to-speech requests.
-* **Robust Classification:** Uses a Random Forest Classifier with an 80/20 train-test split validation strategy.
+## ✨ Key Features
+* **Real-time Detection:** High-performance hand tracking using MediaPipe (21 landmarks).
+* **Virtual Interface:** "Touchless" virtual buttons controlled by fingertip coordinates.
+* **Custom Data Collection:** Integrated tools to record and label new gesture datasets easily.
+* **Audio Caching Engine:** Implements MD5 hashing to cache generated audio, eliminating network latency for repeated phrases.
+* **Robust Classification:** Uses a Random Forest Classifier to ensure high accuracy with minimal computational load.
 
-## System Architecture
-The application workflow consists of three primary modules:
-1.  **Detection Module:** Captures video frames and extracts normalized hand landmark coordinates (x, y, z).
-2.  **Prediction Engine:** Flattens the coordinate vector and feeds it into the trained machine learning model to predict the gesture class.
-3.  **Feedback Loop:** Updates the visual overlay and triggers the audio engine if the prediction confidence and stability thresholds are met.
+## 🛠 System Architecture
+1.  **Input Layer:** Captures video feed and extracts hand landmarks (x, y, z coordinates).
+2.  **Processing Layer:** Normalizes data and predicts the gesture class using the pre-trained model.
+3.  **Interaction Layer:** Checks for virtual button collisions (e.g., Toggle Voice) and manages audio output queues.
 
-## Installation
+## 💻 Installation
 
 ### Prerequisites
 * Python 3.8 or higher
-* A functional webcam
+* Webcam
 
-### Setup Guide
+### Steps
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/yourusername/gesture-recognition-system.git](https://github.com/yourusername/gesture-recognition-system.git)
-    cd gesture-recognition-system
+    git clone [https://github.com/FERI-RAMADHAN/smart-gesture-recognition.git](https://github.com/FERI-RAMADHAN/smart-gesture-recognition.git)
+    cd smart-gesture-recognition
     ```
 
 2.  **Create a Virtual Environment (Recommended)**
     ```bash
-    python -m venv venv
     # Windows
+    python -m venv venv
     venv\Scripts\activate
+
     # macOS/Linux
     source venv/bin/activate
     ```
@@ -59,11 +63,69 @@ The application workflow consists of three primary modules:
     pip install -r requirements.txt
     ```
 
-## Usage
+## 🚀 Usage Workflow
 
-The system operates in three stages: Data Collection, Training, and Execution.
+This system is designed in three modular stages. Follow this order to get started:
 
-### 1. Data Collection
-To add a new gesture to the system:
+### 1. Data Collection (`collect_data.py`)
+Use this script to create a dataset for a new gesture.
 ```bash
 python collect_data.py
+
+```
+
+* Enter the name of the gesture (e.g., "Hello").
+* Press **'R'** to start recording (the system captures 150 samples).
+* The data is saved automatically in the `data/` directory.
+
+### 2. Model Training (`train_model.py`)
+
+Run this script to train the AI model on your collected data.
+
+```bash
+python train_model.py
+
+```
+
+* The script loads all CSV files from `data/`.
+* It trains a Random Forest Classifier.
+* The trained model is saved to `models/gesture_model.pkl`.
+
+### 3. Run Application (`main.py`)
+
+Start the main interface for real-time recognition.
+
+```bash
+python main.py
+
+```
+
+* **Interact:** Use your index finger to "click" the virtual **VOICE** button to toggle sound.
+* **Exit:** Press **'Q'** to close the application.
+
+## 📂 Project Structure
+
+```text
+├── audio_cache/       # Auto-generated MP3 files for low-latency playback
+├── data/              # CSV datasets for training
+├── models/            # Serialized Machine Learning models (.pkl)
+├── collect_data.py    # Data acquisition tool
+├── main.py            # Main application entry point
+├── speaker.py         # Audio engine with caching logic
+├── train_model.py     # Model training script
+├── requirements.txt   # Python dependencies
+└── README.md          # Project documentation
+
+```
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://www.google.com/search?q=LICENSE) file for details.
+
+---
+
+**Developed by Feri Ramadhan**
+
+```
+
+```
