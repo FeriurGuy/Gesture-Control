@@ -39,7 +39,7 @@ This project facilitates Human-Computer Interaction (HCI) by converting static h
 ### Steps
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/yourusername/gesture-recognition-system.git](https://github.com/FeriurGuy/Gesture-Control.git)
+    git clone [https://github.com/FeriurGuy/Gesture-Control.git
     cd Gesture-Control
     ```
 
