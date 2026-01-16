@@ -3,7 +3,7 @@
 A computer vision application that translates real-time hand gestures into spoken audio commands. This system leverages **MediaPipe** for hand landmark detection and **Scikit-Learn** for gesture classification, featuring a virtual touchless interface and low-latency audio feedback.
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
-![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green)
+![OpenCV](https://img.shields.io/badge/OpenCV-Mediapipe-green)
 ![License](https://img.shields.io/badge/license-MIT-grey)
 
 ## Table of Contents
