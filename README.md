@@ -3,7 +3,7 @@
 A computer vision application that translates real-time hand gestures into spoken audio commands. This system leverages **MediaPipe** for hand landmark detection and **Scikit-Learn** for gesture classification, featuring a virtual touchless interface and low-latency audio feedback.
 
 ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
-![OpenCV](https://img.shields.io/badge/OpenCV-Computer%20Vision-green)
+![Python](https://img.shields.io/badge/Mediapipe-green)
 ![License](https://img.shields.io/badge/license-MIT-grey)
 
 ## Table of Contents
@@ -39,8 +39,8 @@ This project facilitates Human-Computer Interaction (HCI) by converting static h
 ### Steps
 1.  **Clone the repository**
     ```bash
-    git clone [https://github.com/yourusername/gesture-recognition-system.git](https://github.com/FeriurGuy/Gesture-Control.git)
-    cd gesture-recognition-system
+    git clone [https://github.com/FeriurGuy/Gesture-Control.git
+    cd Gesture-Control
     ```
 
 2.  **Create a Virtual Environment (Recommended)**
