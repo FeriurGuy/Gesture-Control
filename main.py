@@ -47,11 +47,9 @@ except Exception as e:
     exit()
 
 gesture_map = {
-    "hallo": "Halo, salam kenal semuanya",
-    "nama": "Perkenalkan, nama saya Feri Ramadhan",
-    "izinn": "Permisi, saya izin sebentar",
-    "gerakan_hallo": "Ini adalah gerakan menyapa",
-    "gerakan_anjay": "Luar biasa, mantap!"
+    "hallo": "Halooo",
+    "nama": "Saya Feri Ramadhan",
+    "fuck": "Fuck You All",
 }
 
 def predict_gesture(landmarks):
@@ -88,6 +86,8 @@ def main():
 
         # Header UI
         cv2.rectangle(frame, (0, 0), (w, 50), (40, 40, 40), -1)
+        cv2.putText(frame, "Created by: Feri Ramadhan", (15, 10), 
+                   cv2.FONT_HERSHEY_SIMPLEX, 0.5, (200, 200, 200), 1)
         cv2.putText(frame, "GESTURE RECOGNITION SYSTEM V1.0", (15, 35), 
                    cv2.FONT_HERSHEY_SIMPLEX, 0.7, (255, 255, 255), 2)
 

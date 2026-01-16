@@ -20,7 +20,7 @@ def draw_ui(img, current, total, gesture_name, recording, countdown_val):
     cv2.putText(img, status, (10, h-10), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (255, 255, 255), 1)
     
     # Header Info
-    cv2.putText(img, f"TARGET: {gesture_name.upper()}", (10, 30), 
+    cv2.putText(img, f"Gesture: {gesture_name.upper()}", (10, 30), 
                 cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 255, 255), 2)
 
     if not recording:
